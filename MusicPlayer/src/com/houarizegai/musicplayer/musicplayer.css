@@ -2,3 +2,51 @@
     orange color: #f3970c
     blue color: #33485d
 */
+
+/* Change the color of Hamburger */
+.hamburger StackPane {
+    -fx-background-color: #FFF;
+}
+
+/* Close Button */
+.btn-close{
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+    -fx-background-color: #FC5653;
+    -fx-background-radius: 100%;
+}
+.btn-close:hover{
+    -fx-cursor: hand;
+    -fx-background-color: red;
+    -fx-background-radius: 100%;
+}
+
+/* Hide Button */
+.btn-min{
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+    -fx-background-color: #29CC41;
+    -fx-background-radius: 100%;
+}
+.btn-min:hover{
+    -fx-cursor: hand;
+    -fx-background-color: green;
+    -fx-background-radius: 100%;
+}
+
+.btn-control-music {
+    -fx-cursor: hand;
+    -fx-fill: #DDD
+}
+.btn-control-music:hover {
+    -fx-fill: #FFF
+}
+
+/* Start Settings Style */
+
+.title-settings {
+    -fx-text-fill: #FFF;
+    -fx-font-size: 18px;
+}
+
+/* End Settings Style */
