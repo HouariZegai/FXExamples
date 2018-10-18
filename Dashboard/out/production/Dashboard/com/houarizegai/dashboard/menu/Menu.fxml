@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox styleClass="root" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton accessibleText="Profile" styleClass="menu-item" text="Profile" />
+      <JFXButton accessibleText="Settings" styleClass="menu-item" text="Settings" />
+      <JFXButton accessibleText="Report" styleClass="menu-item" text="Report" />
+      <JFXButton accessibleText="Logout" styleClass="menu-item" text="Logout" />
+   </children>
+</VBox>

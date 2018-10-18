@@ -1,0 +1,18 @@
+* {
+    -fx-font-family: tahoma arial;
+}
+
+.root {
+    -fx-background-radius: 10;
+}
+
+.menu-item {
+    -fx-pref-width: 180px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #FFF;
+    -fx-text-fill: #000;
+    -fx-border-width: 0 0 0.1px 0;
+    -fx-border-style: solid;
+    -fx-border-color: #333;
+    -fx-cursor: hand;
+}
