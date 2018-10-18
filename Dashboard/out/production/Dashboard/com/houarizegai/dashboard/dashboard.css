@@ -1,0 +1,85 @@
+* {
+   -fx-font-family: tahoma arial;
+}
+
+/* Start Menu */
+
+.menu-container {
+    -fx-background-color: #333a4d;
+}
+
+.menu-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFF;
+}
+.menu-box {
+    -fx-pref-height: 40px;
+}
+.menu-box:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-border-color: #FFF;
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-style: solid;
+    -fx-cursor: hand
+}
+
+.menu-item {
+    -fx-font-size: 14px;
+    -fx-text-fill: #DDD;
+}
+
+/* End Menu */
+
+/* Start RightPane */
+
+.nav-icon {
+    -fx-fill: #666
+}
+
+.nav-profile-title {
+    -fx-font-weight: bold
+}
+
+.nav-icon:hover {
+    -fx-cursor: hand;
+    -fx-fill: #333
+}
+
+.nav-profile-box:hover {
+    -fx-background-color: #EEE;
+    -fx-background-radius: 8%;
+    -fx-cursor: hand;
+}
+
+.card {
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 20, 0, 0, 0);
+}
+
+.card-title {
+    -fx-font-size: 20px
+}
+
+.card-txt {
+    -fx-font-size: 12px
+}
+
+.card-fb {
+    -fx-background-color: linear-gradient(from 100% 0% to 0% 100%, repeat, #A9C 0%, #2196f3 50%);
+}
+
+.card-tw {
+    -fx-background-color: linear-gradient(from 100% 0% to 0% 100%, repeat, #0082b8 0%, #09aced 50%);
+}
+
+.card-in {
+    -fx-background-color: linear-gradient(from 100% 0% to 0% 100%, repeat, #6e6ec6 0%, #351673 50%);
+}
+
+.card-other {
+    -fx-background-color: #FFF;
+}
+
+/* End RightPane */

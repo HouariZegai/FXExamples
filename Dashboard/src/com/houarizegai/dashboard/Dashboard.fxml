@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.5" prefHeight="650.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.dashboard.DashboardController">
+   <items>
+      <VBox maxWidth="-Infinity" minWidth="120.0" prefWidth="200.0" spacing="20.0" styleClass="menu-container">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Label styleClass="menu-title" text="Statistics">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Countries" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Visitors" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Shopping" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Social media" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label styleClass="menu-title" text="Statistics">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <VBox>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Countries" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Visitors" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Shopping" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="menu-box">
+                           <children>
+                              <Label styleClass="menu-item" text="Social media" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <AnchorPane>
+         <children>
+            <BorderPane prefWidth="800.0">
+               <top>
+                  <StackPane prefHeight="50.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField disable="true" maxWidth="-Infinity" prefHeight="30.0" promptText="Search" styleClass="field-search" StackPane.alignment="CENTER_LEFT">
+                           <StackPane.margin>
+                              <Insets left="10.0" />
+                           </StackPane.margin>
+                        </TextField>
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="20.0" StackPane.alignment="CENTER_RIGHT">
+                           <children>
+                              <FontAwesomeIconView glyphName="BELL" size="21" styleClass="nav-icon" />
+                              <FontAwesomeIconView glyphName="ENVELOPE" size="21" styleClass="nav-icon" />
+                              <HBox alignment="CENTER_LEFT" onMouseClicked="#onMenu" spacing="10.0" styleClass="nav-profile-box">
+                                 <children>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/houari.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="nav-profile-title" text="Houari" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <StackPane.margin>
+                              <Insets right="20.0" />
+                           </StackPane.margin>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </top>
+               <center>
+                  <FlowPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="260.0" prefWidth="709.0" vgap="20.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="Likes on" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="Facebook" textFill="WHITE" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="+9K" textFill="WHITE" />
+                                 </children>
+                              </VBox>
+                              <Icons525View fill="WHITE" glyphName="CIRCLE_FACEBOOK" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Icons525View>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-fb" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <Icons525View fill="WHITE" glyphName="CIRCLE_TWITTER" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Icons525View>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="Likes on" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="Twitter" textFill="WHITE" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="+500" textFill="WHITE" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-tw" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <Icons525View fill="WHITE" glyphName="CIRCLE_INSTAGRAM" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Icons525View>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="likes on" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="Instagram" textFill="WHITE" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#eeeeee" />
+                                    <Label styleClass="card-title" text="+1K" textFill="WHITE" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-in" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <Icons525View fill="WHITE" glyphName="CIRCLE_INSTAGRAM" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </Icons525View>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="new" textFill="#0680d1b2" />
+                                    <Label styleClass="card-title" text="Shopping" textFill="#067ed3" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#0680d1b2" />
+                                    <Label styleClass="card-title" text="+790" textFill="#067ed3" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <FontAwesomeIconView fill="#ff3939" glyphName="USERS" size="35" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="15.0" />
+                                 </StackPane.margin>
+                              </FontAwesomeIconView>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="new" textFill="#ff3d3db2" />
+                                    <Label styleClass="card-title" text="Users" textFill="#ff3939" />
+                                    <Label styleClass="card-txt" text="Today" textFill="#ff3d3db2" />
+                                    <Label styleClass="card-title" text="+790" textFill="#ff3939" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <FontAwesomeIconView fill="#4dbf18" glyphName="USERS" size="35" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="15.0" />
+                                 </StackPane.margin>
+                              </FontAwesomeIconView>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="new" textFill="#4dbf18b2" />
+                                    <Label styleClass="card-title" text="Users" textFill="#4dbf18" />
+                                    <Label styleClass="card-txt" text="Today" textFill="#4dbf18b2" />
+                                    <Label styleClass="card-title" text="+790" textFill="#4dbf18" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <FontAwesomeIconView fill="#333333" glyphName="BUS" size="32" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </FontAwesomeIconView>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="local" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="Shipping" textFill="#333333" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="+100" textFill="#333333" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <MaterialDesignIconView fill="#333333" glyphName="CURRENCY_USD" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </MaterialDesignIconView>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="shopping" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="Revenue" textFill="#333333" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="+1K" textFill="#333333" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane maxWidth="-Infinity" prefWidth="220.0">
+                           <children>
+                              <MaterialDesignIconView fill="#333333" glyphName="CURRENCY_USD" size="40" StackPane.alignment="TOP_RIGHT">
+                                 <StackPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </StackPane.margin>
+                              </MaterialDesignIconView>
+                              <VBox alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+                                 <children>
+                                    <Label styleClass="card-txt" text="verified" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="Shopping" textFill="#333333" />
+                                    <Label styleClass="card-txt" text="last 30 days" textFill="#333333b2" />
+                                    <Label styleClass="card-title" text="+10K" textFill="#333333" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <styleClass>
+                              <String fx:value="card" />
+                              <String fx:value="card-other" />
+                           </styleClass>
+                        </StackPane>
+                     </children>
+                  </FlowPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
