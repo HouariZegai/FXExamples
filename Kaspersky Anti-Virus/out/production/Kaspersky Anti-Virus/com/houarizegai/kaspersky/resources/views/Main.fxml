@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.kaspersky.java.controllers.MainController">
+   <center>
+      <StackPane prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <ImageView fitWidth="330.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo-intro-app.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="intro-title" text="Kaspersky Anti-Virus" />
+                  <Label styleClass="intro-txt" text="Tack a quick tour trought the application features" />
+                  <JFXButton styleClass="intro-btn" text="Continue">
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Hyperlink styleClass="intro-link" text="Skip" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <StackPane prefHeight="45.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" StackPane.alignment="CENTER_LEFT">
+               <children>
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon-app.PNG" />
+                     </image>
+                  </ImageView>
+                  <Label styleClass="app-title" text="Kaspersky Anti-Virus" />
+               </children>
+               <StackPane.margin>
+                  <Insets left="5.0" />
+               </StackPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" fillHeight="false" maxWidth="-Infinity" spacing="5.0" StackPane.alignment="CENTER_RIGHT">
+               <children>
+                  <MaterialIconView glyphName="CLEAR_ALL" onMouseClicked="#onHide" size="28" styleClass="app-btn" />
+                  <MaterialDesignIconView fill="#333333" glyphName="CLOSE" onMouseClicked="#onClose" size="28" styleClass="app-btn" />
+               </children>
+               <StackPane.margin>
+                  <Insets right="5.0" />
+               </StackPane.margin>
+            </HBox>
+         </children>
+      </StackPane>
+   </top>
+</BorderPane>
