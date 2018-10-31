@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../css/intro.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" spacing="10.0">
+         <children>
+            <ImageView fitWidth="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo-intro-app.PNG" />
+               </image>
+            </ImageView>
+            <Label styleClass="intro-title" text="Kaspersky Anti-Virus" />
+            <Label styleClass="intro-txt" text="Tack a quick tour trought the application features" />
+            <JFXButton styleClass="intro-btn" text="Continue">
+               <VBox.margin>
+                  <Insets top="35.0" />
+               </VBox.margin>
+            </JFXButton>
+            <Hyperlink styleClass="intro-link" text="Skip" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,31 @@
+* {
+    -fx-font-family: tahoma;
+}
+
+.intro-title {
+    -fx-font-size: 20px;
+}
+
+.intro-txt {
+    -fx-font-size: 17px;
+    -fx-text-fill: #666;
+}
+
+.intro-btn {
+    -fx-font-size: 16px;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #006d5c;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.intro-btn:hover {
+    -fx-background-color: #005448;
+}
+
+.intro-link {
+    -fx-font-size: 16px;
+    -fx-text-fill: #006d5c;
+}

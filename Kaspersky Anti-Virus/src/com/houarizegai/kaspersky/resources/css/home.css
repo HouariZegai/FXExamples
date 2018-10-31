@@ -1,0 +1,49 @@
+* {
+    -fx-font-family: tahoma;
+}
+
+.home-title {
+    -fx-font-size: 20px;
+}
+
+.home-btn {
+    -fx-font-size: 15px;
+    -fx-pref-width: 130px;
+    -fx-pref-height: 30px;
+    -fx-text-fill: #006d5c;
+    -fx-border-color: #006d5c;
+    -fx-border-style: solid;
+    -fx-border-width: 0.5px;
+    -fx-cursor: hand;
+}
+
+.home-box-container {
+    -fx-pref-width: 320px;
+    -fx-pref-height: 70px;
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 6, 0, 0, 0);
+    -fx-background-radius: 2;
+}
+
+.home-box-container:hover {
+    -fx-translate-y: -2;
+    -fx-cursor: hand;
+}
+
+.home-box-icon {
+    -fx-fill: #006d5c;
+}
+
+.home-box-txt {
+    -fx-font-size: 17px;
+    -fx-text-fill: #006d5c;
+}
+
+.home-box-btn { /* button 'more tools' */
+    -fx-pref-width: 160px;
+    -fx-pref-height: 35px;
+    -fx-background-color: #006d5c;
+    -fx-text-fill: #FFF;
+    -fx-font-size: 16px;
+    -fx-cursor: hand
+}
