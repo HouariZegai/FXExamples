@@ -1,0 +1,24 @@
+* {
+    -fx-font-family: tahoma;
+    -fx-font-size: 18px;
+}
+
+.field {
+    -fx-pref-height: 40px;
+    -jfx-focus-color: #2196f3
+}
+
+.combo {
+    -fx-pref-width: 130px;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}
+
+.btn {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: #FFF;
+    -fx-background-radius: 5;
+    -fx-pref-width: 130px;
+    -fx-pref-height: 40px;
+    -fx-cursor: hand;
+}
