@@ -9,7 +9,8 @@
 }
 
 .combo {
-    -fx-pref-width: 130px;
+    -jfx-focus-color: #2196f3;
+    -fx-pref-width: 160px;
     -fx-pref-height: 40px;
     -fx-cursor: hand;
 }
@@ -18,7 +19,7 @@
     -fx-background-color: #2196f3;
     -fx-text-fill: #FFF;
     -fx-background-radius: 5;
-    -fx-pref-width: 130px;
+    -fx-pref-width: 160px;
     -fx-pref-height: 40px;
     -fx-cursor: hand;
 }
