@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" spacing="20.0" stylesheets="@../css/convert-currency.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.convertcurrency.java.controllers.ConvertCurrencyController">
+   <children>
+      <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" spacing="30.0">
+         <children>
+            <HBox spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="fieldMoney" labelFloat="true" promptText="Enter Money" styleClass="field" />
+                  <JFXComboBox fx:id="comboFromCurreny" labelFloat="true" prefHeight="35.0" prefWidth="110.0" promptText="From Currency" styleClass="combo" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+               <children>
+                  <JFXComboBox fx:id="comboToCurreny" labelFloat="true" prefHeight="35.0" prefWidth="110.0" promptText="To Currency" styleClass="combo" />
+               </children>
+            </HBox>
+            <StackPane>
+               <children>
+                  <Label fx:id="lblResult" text="150000 $" StackPane.alignment="CENTER_LEFT" />
+                  <JFXButton onAction="#onConvert" styleClass="btn" text="Convert" StackPane.alignment="CENTER_RIGHT" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="80.0" left="80.0" right="80.0" top="80.0" />
+   </padding>
+</VBox>

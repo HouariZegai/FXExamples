@@ -65,7 +65,7 @@ public class ConvertCurrencyController implements Initializable {
 
     @FXML
     private void onConvert() {
-        if(fieldMoney.getText() == null || !fieldMoney.getText().trim().matches("[0-9]+")) {
+        if(fieldMoney.getText() == null || !fieldMoney.getText().trim().matches("[0-9]+[.]?[0-9]*")) {
             toastMsg.show("Please Type Money in Degit !", 2500);
             return;
         }
@@ -81,7 +81,7 @@ public class ConvertCurrencyController implements Initializable {
 
         double moneyAfterConvert = convertCurrency(comboFromCurreny.getSelectionModel().getSelectedItem(),
                 comboToCurreny.getSelectionModel().getSelectedItem(),
-                Integer.parseInt(fieldMoney.getText()));
+                Double.parseDouble(fieldMoney.getText()));
 
         lblResult.setText(String.valueOf(moneyAfterConvert));
 
