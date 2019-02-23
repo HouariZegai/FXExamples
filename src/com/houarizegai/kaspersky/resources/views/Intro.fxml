@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../css/intro.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="root" prefHeight="500.0" prefWidth="800.0" stylesheets="@../css/intro.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.kaspersky.java.controllers.IntroController">
    <children>
       <VBox alignment="CENTER" spacing="10.0">
          <children>
@@ -20,12 +20,12 @@
             </ImageView>
             <Label styleClass="intro-title" text="Kaspersky Anti-Virus" />
             <Label styleClass="intro-txt" text="Tack a quick tour trought the application features" />
-            <JFXButton styleClass="intro-btn" text="Continue">
+            <JFXButton styleClass="intro-btn" text="Continue" onAction="#onContinue">
                <VBox.margin>
                   <Insets top="35.0" />
                </VBox.margin>
             </JFXButton>
-            <Hyperlink styleClass="intro-link" text="Skip" />
+            <Hyperlink styleClass="intro-link" text="Skip" onAction="#onSkip" />
          </children>
       </VBox>
    </children>

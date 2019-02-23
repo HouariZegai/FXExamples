@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane fx:id="root" prefHeight="500.0" prefWidth="800.0" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.houarizegai.kaspersky.java.controllers.HomeController">
    <children>
       <VBox spacing="10.0">
          <children>
@@ -89,7 +89,7 @@
                         </HBox>
                      </children>
                   </GridPane>
-                  <JFXButton buttonType="RAISED" styleClass="home-box-btn" text="More Tools" />
+                  <JFXButton buttonType="RAISED" styleClass="home-box-btn" text="More Tools" onAction="#onMoreTools"/>
                </children>
                <VBox.margin>
                   <Insets top="20.0" />
