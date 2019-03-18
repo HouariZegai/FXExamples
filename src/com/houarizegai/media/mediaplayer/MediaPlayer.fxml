@@ -21,9 +21,9 @@
                   <JFXSlider fx:id="sliderMedia" disable="true" value="-1.0" HBox.hgrow="ALWAYS" />
                   <HBox spacing="3.0">
                      <children>
-                        <Label fx:id="lblCurrentTimeMedia" styleClass="lbl-time" text="00:00:00" />
-                        <Label styleClass="lbl-time2" text="/" />
-                        <Label fx:id="lblTotalTimeMedia" styleClass="lbl-time2" text="00:00:00" />
+                        <Label fx:id="lblCurrentTimeMedia" style="-fx-text-fill: color-base;" text="00:00:00" />
+                        <Label style="-fx-text-fill: #333;" text="/" />
+                        <Label fx:id="lblTotalTimeMedia" style="-fx-text-fill: #333;" text="00:00:00" />
                      </children>
                   </HBox>
                </children>
@@ -34,6 +34,12 @@
                   <JFXButton onAction="#onReplay" styleClass="btn" text="Replay" />
                   <JFXButton onAction="#onPlay" styleClass="btn" text="Play" />
                   <JFXButton onAction="#onPause" styleClass="btn" text="Pause" />
+                  <HBox alignment="CENTER" maxWidth="-Infinity" spacing="5.0">
+                     <children>
+                        <Label style="-fx-text-fill: #333;" styleClass="lbl-volume" text="Volume" />
+                        <JFXSlider fx:id="sliderVolume" prefWidth="100.0" value="100.0" />
+                     </children>
+                  </HBox>
                </children>
             </HBox>
          </children>
@@ -46,7 +52,7 @@
       <HBox spacing="5.0" BorderPane.alignment="CENTER">
          <children>
             <Label styleClass="media-title" text="Media name:" />
-            <Label fx:id="lblMediaTitle" styleClass="media-txt" text="blabla.mp4" />
+            <Label fx:id="lblMediaTitle" styleClass="media-tbl" text="blabla.mp4" />
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" />

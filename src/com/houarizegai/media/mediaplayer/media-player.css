@@ -3,23 +3,21 @@
     color-base: darkcyan;
 }
 
+Label {
+    -fx-font-size: 16px;
+}
+
+JFXSlider {
+    -fx-cursor: hand;
+}
+
 .media-title {
     -fx-font-size: 18px;
     -fx-text-fill: color-base;
 }
 
-.media-txt {
+.media-tbl {
     -fx-font-size: 18px;
-}
-
-.lbl-time {
-    -fx-font-size: 16px;
-    -fx-text-fill: color-base;
-}
-
-.lbl-time2 {
-    -fx-font-size: 16px;
-    -fx-text-fill: #333
 }
 
 .btn {

@@ -21,7 +21,7 @@ public class MediaPlayerController implements Initializable {
     private Label lblMediaTitle;
 
     @FXML
-    private JFXSlider sliderMedia;
+    private JFXSlider sliderMedia, sliderVolume;
 
     @FXML
     private Label lblCurrentTimeMedia, lblTotalTimeMedia;
@@ -87,6 +87,13 @@ public class MediaPlayerController implements Initializable {
                             TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(totalMediaTime)), // The change is in this line
                     TimeUnit.MILLISECONDS.toSeconds(totalMediaTime) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalMediaTime))));
+
+            // Auto change media volume
+            sliderVolume.valueProperty().addListener(e -> {
+                if(sliderVolume.isPressed()) {
+                    mediaPlayer.setVolume(sliderVolume.getValue() / 100);
+                }
+            });
 
         } catch (MediaException me) {
             me.printStackTrace();
