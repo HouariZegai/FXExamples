@@ -30,3 +30,9 @@ JFXSlider {
     -jfx-button-type: RAISED;
     -fx-cursor: hand;
 }
+
+.icon-control-media {
+    -fx-fill: color-base;
+    -glyph-size: 30;
+    -fx-cursor: hand;
+}
