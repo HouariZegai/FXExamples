@@ -1,11 +1,10 @@
-package com.houarizegai.musicplayer;
+package com.houarizegai.media.musicplayer;
 
 import com.jfoenix.controls.JFXHamburger;
 import com.jfoenix.controls.JFXProgressBar;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.animation.FadeTransition;
-import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;

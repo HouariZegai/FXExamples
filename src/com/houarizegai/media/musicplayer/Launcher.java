@@ -1,4 +1,4 @@
-package com.houarizegai.musicplayer;
+package com.houarizegai.media.musicplayer;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +14,10 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/houarizegai/musicplayer/MusicPlayer.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/houarizegai/media/musicplayer/MusicPlayer.fxml"));
         Scene scene = new Scene(root);
-        scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
+        scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);
         Launcher.stage = stage;
         stage.show();
