@@ -18,12 +18,12 @@
          <children>
             <HBox alignment="CENTER" spacing="10.0">
                <children>
-                  <JFXSlider fx:id="sliderMedia" value="-1.0" HBox.hgrow="ALWAYS" />
+                  <JFXSlider fx:id="sliderMedia" disable="true" value="-1.0" HBox.hgrow="ALWAYS" />
                   <HBox spacing="3.0">
                      <children>
-                        <Label fx:id="currentTimeMedia" styleClass="lbl-time" text="00:00:00" />
+                        <Label fx:id="lblCurrentTimeMedia" styleClass="lbl-time" text="00:00:00" />
                         <Label styleClass="lbl-time2" text="/" />
-                        <Label fx:id="totalTimeMedia" styleClass="lbl-time2" text="00:00:00" />
+                        <Label fx:id="lblTotalTimeMedia" styleClass="lbl-time2" text="00:00:00" />
                      </children>
                   </HBox>
                </children>
