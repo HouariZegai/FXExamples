@@ -10,8 +10,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
@@ -26,6 +30,9 @@ import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
 public class MediaPlayerController implements Initializable {
+    @FXML
+    private BorderPane root;
+
     @FXML
     private Label lblMediaTitle;
 
@@ -60,6 +67,24 @@ public class MediaPlayerController implements Initializable {
         //For auto-resize
         mediaView.fitHeightProperty().bind(Bindings.selectDouble(mediaView.sceneProperty(), "height").subtract(197));
         mediaView.fitWidthProperty().bind(Bindings.selectDouble(mediaView.sceneProperty(), "width").subtract(40));
+
+        // Make keyborad typed listener (shortcut)
+        root.setOnKeyPressed(e -> {
+            if(e.getCode().equals(KeyCode.SPACE))
+                onPlayPause();
+            if(e.getCode().equals(KeyCode.O))
+                onOpen();
+
+            if(e.getCode().equals(KeyCode.ADD))
+                sliderVolume.setValue(sliderVolume.getValue() + 10);
+            if(e.getCode().equals(KeyCode.SUBTRACT))
+                sliderVolume.setValue(sliderVolume.getValue() - 10);
+        });
+    }
+
+    @FXML
+    private void onFullScreen() {
+        ((Stage) mediaView.getScene().getWindow()).setFullScreen(true);
     }
 
     @FXML
@@ -107,11 +132,7 @@ public class MediaPlayerController implements Initializable {
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalMediaTime))));
 
             // Auto change media volume
-            sliderVolume.valueProperty().addListener(e -> {
-                if(sliderVolume.isPressed()) {
-                    mediaPlayer.setVolume(sliderVolume.getValue() / 100);
-                }
-            });
+            mediaPlayer.volumeProperty().bind(sliderVolume.valueProperty().divide(100));
 
         } catch (MediaException me) {
             me.printStackTrace();

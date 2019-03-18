@@ -31,7 +31,7 @@ JFXSlider {
     -fx-cursor: hand;
 }
 
-.icon-control-media {
+.icon-media {
     -fx-fill: color-base;
     -glyph-size: 30;
     -fx-cursor: hand;
