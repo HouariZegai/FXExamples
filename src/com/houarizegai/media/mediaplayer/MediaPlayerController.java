@@ -84,7 +84,8 @@ public class MediaPlayerController implements Initializable {
 
     @FXML
     private void onFullScreen() {
-        ((Stage) mediaView.getScene().getWindow()).setFullScreen(true);
+        Stage stage = ((Stage) mediaView.getScene().getWindow());
+        stage.setFullScreen(!stage.isFullScreen());
     }
 
     @FXML
@@ -97,7 +98,7 @@ public class MediaPlayerController implements Initializable {
             String filePath = selectedFile.toURI().toString();
             sliderMedia.setDisable(false); // Enable change the value of media slider
 
-            // Make the name of media showing in app
+            // Make the name of media for showing in app
             lblMediaTitle.setText(filePath.split("/")[filePath.split("/").length -1].replace("%20", " "));
 
             mediaPlayer = new MediaPlayer(new Media(filePath));
@@ -107,7 +108,7 @@ public class MediaPlayerController implements Initializable {
                 updateValues();
             });
 
-            // Auto Change video time when i change the value of slider
+            // Auto change video time when i change the value of slider
             sliderMedia.valueProperty().addListener(e -> {
                 if(sliderMedia.isPressed()) {
                     mediaPlayer.seek(mediaPlayer.getMedia().getDuration().multiply(sliderMedia.getValue() / 100));
@@ -173,17 +174,22 @@ public class MediaPlayerController implements Initializable {
                 TimeUnit.MILLISECONDS.toSeconds(currentMediaTime) -
                         TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(currentMediaTime))));
 
-        if(isTotalMaked)
-            return;
+        if(!isTotalMaked) {
+            /* Change label of total media time */
+            int totalMediaTime = (int) mediaPlayer.getTotalDuration().toMillis();
 
-        /* Change label of total media time */
-        int totalMediaTime = (int) mediaPlayer.getTotalDuration().toMillis();
-        lblTotalTimeMedia.setText(String.format("%02d:%02d:%02d",
-                TimeUnit.MILLISECONDS.toHours(totalMediaTime),
-                TimeUnit.MILLISECONDS.toMinutes(totalMediaTime) -
-                        TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(totalMediaTime)), // The change is in this line
-                TimeUnit.MILLISECONDS.toSeconds(totalMediaTime) -
-                        TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalMediaTime))));
-        isTotalMaked = true;
+            if(totalMediaTime == 0)
+                return;
+
+            lblTotalTimeMedia.setText(String.format("%02d:%02d:%02d",
+                    TimeUnit.MILLISECONDS.toHours(totalMediaTime),
+                    TimeUnit.MILLISECONDS.toMinutes(totalMediaTime) -
+                            TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(totalMediaTime)), // The change is in this line
+                    TimeUnit.MILLISECONDS.toSeconds(totalMediaTime) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(totalMediaTime))));
+
+            isTotalMaked = true;
+        }
+
     }
 }
