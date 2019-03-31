@@ -1,0 +1,23 @@
+* {
+    -fx-font-family: Tahoma
+}
+
+/* Start tool bar */
+
+.right-nav > .label {
+	-fx-font-size: 17px;
+}
+
+.right-nav > .titled-pane > Label  {
+	-fx-font-size: 14px;
+}
+
+.right-nav .jfx-toggle-button {
+    -fx-padding: -15px;
+}
+
+/* End tool bar */
+
+.text-area {
+    -fx-font-size: 20px
+}
