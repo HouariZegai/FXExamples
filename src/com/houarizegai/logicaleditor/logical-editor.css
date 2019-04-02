@@ -2,7 +2,7 @@
     -fx-font-family: Tahoma
 }
 
-/* Start tool bar */
+/* Start right nav */
 
 .right-nav > .label {
 	-fx-font-size: 17px;
@@ -16,8 +16,26 @@
     -fx-padding: -15px;
 }
 
+/* End right nav */
+
+/* Start tool bar */
+
+.tool-container .button {
+	-fx-padding: 0px;
+	-fx-pref-width: 30px;
+	-fx-pref-height: 30px;
+	-fx-font-size: 22px;
+	-fx-cursor: hand;
+	-fx-background-radius: 5;
+}
+
 /* End tool bar */
 
 .text-area {
-    -fx-font-size: 20px
+    -fx-font-size: 20px;
+    -fx-text-fill: #EEE;
+}
+
+.text-area .content {
+	-fx-background-color: #333;
 }

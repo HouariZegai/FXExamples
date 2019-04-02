@@ -3,11 +3,14 @@
 <?import com.jfoenix.controls.JFXColorPicker?>
 <?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextArea?>
@@ -15,6 +18,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
@@ -49,11 +53,40 @@
                 </Menu>
               </menus>
             </MenuBar>
+            <ScrollPane>
+               <content>
+                  <HBox spacing="5.0" styleClass="tool-container">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="¬" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="∧" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="∨" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="→" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="↔" />
+                        <Separator orientation="VERTICAL" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="∀" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="∃" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="∃!" />
+                        <Separator orientation="VERTICAL" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⊢" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⊨" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⇒" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⇔" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="≡" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⊕" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⊨" />
+                        <Button mnemonicParsing="false" onAction="#onSymbol" styleClass="tool-bar-btn" text="⊨" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
    </top>
-   <right>
-      <SplitPane dividerPositions="0.5">
+   <center>
+      <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
          <items>
             <TextArea fx:id="areaEditor" />
             <ScrollPane maxWidth="-Infinity">
@@ -80,18 +113,18 @@
                                     <Label contentDisplay="RIGHT" text="Italic" GridPane.rowIndex="2" />
                                     <Label contentDisplay="RIGHT" text="Foreground" GridPane.rowIndex="3" />
                                     <Label contentDisplay="RIGHT" text="Background" GridPane.rowIndex="4" />
-                                    <JFXSlider indicatorPosition="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="14.0" prefWidth="89.0" GridPane.columnIndex="1" />
-                                    <JFXToggleButton contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <JFXToggleButton contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <JFXColorPicker GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                    <JFXColorPicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <JFXSlider fx:id="sliderFontSize" indicatorPosition="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="14.0" prefWidth="89.0" GridPane.columnIndex="1" />
+                                    <JFXToggleButton fx:id="tglFontBold" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <JFXToggleButton fx:id="tglFontItalic" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <JFXColorPicker fx:id="pickerFontForeground" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <JFXColorPicker fx:id="pickerFontBackground" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                  </children>
                               </GridPane>
                            </content>
                         </TitledPane>
                         <TitledPane text="Editor">
                            <content>
-                              <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="right-nav-container" vgap="10.0">
+                              <GridPane disable="true" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="right-nav-container" vgap="10.0">
                                  <columnConstraints>
                                     <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
                                     <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" />
@@ -115,5 +148,5 @@
             </ScrollPane>
          </items>
       </SplitPane>
-   </right>
+   </center>
 </BorderPane>
